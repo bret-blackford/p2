@@ -18,10 +18,11 @@ $age = $difference->y;
 $totHeightInches = ($heightFeet * 12) + $heightInches;
 $bmi = number_format( ($weight * 703) / (pow($totHeightInches, 2)), 2 );
 
+$status = checkHealth($bmi);
 
 $response = $name . ", you are a " . $age . " year old " . $gender;
 $response .= " and have a body mass index (BMI) of : " . $bmi . "%";
-
+$response .= " which gives classifies you as " . $status;
 
 
 $_SESSION['response']= $response;
@@ -33,3 +34,16 @@ $_SESSION['heightInches'] = $heightInches;
 $_SESSION['weight'] = $weight;
 
 header('location: index.php');
+
+
+function checkHealth($bmi){
+    $status = 'obese';
+    if( $bmi < 30 ){
+        $status = 'overweight';
+    } if( $bmi < 25 ) {
+        $status = 'normal';
+    } if( $bmi < 18.5 ){
+        $status = 'underweight';
+    }
+    return $status;
+}

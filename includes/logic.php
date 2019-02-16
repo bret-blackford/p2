@@ -21,6 +21,6 @@ if( isset($_SESSION['weight']) ){
     $weight = $_SESSION['weight'];
 }
 
-dump($_SESSION);
+//dump($_SESSION);
 
 session_unset();

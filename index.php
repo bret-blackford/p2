@@ -1,4 +1,7 @@
 <?php
+// written by: M. Bret Blackford
+// date: February 2019
+
 require 'includes/logic.php';
 ?>
 
@@ -70,7 +73,7 @@ require 'includes/logic.php';
         </form>
         
         <div id='results'>
-            
+            <?= $response ; ?>
         </div>
     </body>
 
