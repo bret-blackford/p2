@@ -1,0 +1,31 @@
+html {
+    width: 25em;
+    margin-left: 5%;
+}
+
+fieldset {
+    font-size: 1.25em;
+}
+
+input[type='radio'] {
+    margin-right: 0;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+#line {
+    float:left;
+}
+
+#gender-block, #height-block, #wight-block {
+    float:left;
+    clear: left;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+input[name=name]{
+    width:200px;
+}
