@@ -3,8 +3,14 @@ html {
     margin-left: 5%;
 }
 
+form {
+    background-color: lightgoldenrodyellow;
+}
+
+
 fieldset {
     font-size: 1.25em;
+    margin-bottom: 20px;
 }
 
 input[type='radio'] {
@@ -22,10 +28,19 @@ input[type='radio'] {
     clear: left;
 }
 
-fieldset {
-    margin-bottom: 20px;
-}
-
 input[name=name]{
     width:200px;
+}
+
+#ftr {
+    width: 100%;
+    float: right;
+    text-height: .75em;
+    text-align: right;
+    color: red;
+    border-top-style: double;
+    border-top-width: 3px;
+    border-top: black;
+    margin-top: 2em;
+    padding-top: 1em;
 }

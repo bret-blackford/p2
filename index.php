@@ -12,13 +12,12 @@ require 'includes/logic.php';
     <head>
         <title>P2</title>
         <meta charset='utf-8'>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
     <body>
         <h1>BMI Calculator</h1>
-        <form method='POST' action='calcBMI.php'>
+        <form method='POST' action='calcBMI.php' class='form'>
             <fieldset>
                 <label id='line'>Name
                     <input type='text' name='name' value='<?= $name ?? ''; ?>'>
@@ -94,6 +93,12 @@ require 'includes/logic.php';
         <div id='results'>
             <?= $response ?? ''; ?>
         </div>
+        <footer
+            <hr><br>
+            <div id="ftr">
+            &COPY; <?php echo date("Y"); ?> date M. Bret Blackford
+            </div>
+        </footer>
     </body>
 
 </html>
