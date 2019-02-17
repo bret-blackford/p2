@@ -21,28 +21,47 @@ require 'includes/logic.php';
         <form method='POST' action='calcBMI.php'>
             <fieldset>
                 <label id='line'>Name
-                    <input type='text' name='name' value='<?= $name ?? '' ?>'>
+                    <input type='text' name='name' value='<?= $name ?? ''; ?>'>
                 </label>
                 <label id='line'>Date of Birth
-                    <input type="date" name='dob' value='<?= $dob ?? '' ?>'>
+                    <input type="date" name='dob' value="<?= $dob ?? ''; ?>">
                 </label>
                 <div id='gender-block'>
                     Gender:
-                    <input type="radio" name='gender' value='Male'>
+                    <input type="radio" name='gender' value='Male' <?php if (!$girl) echo 'checked'; ?>>
                     <label>male</label>
-                    <input type="radio" name='gender' value='Female'>
+                    <input type="radio" name='gender' value='Female' <?php if ($girl) echo 'checked'; ?>>
                     <label>female</label>
                 </div>
                 <div id='height-block'>
                     <label>Height in feet
                         <select name="heightFeet" >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
+                            <option value="1" <?php
+                            if ($heightFt == '1') {
+                                echo 'selected';
+                            }
+                            ?>>1</option>
+                            <option value="2" <?php
+                            echo checkSelectFt($heightFt, 2);
+                            ?>>2</option>
+                            <option value="3" <?php
+                            echo checkSelectFt($heightFt, 3);
+                            ?>>3</option>
+                            <option value="4" <?php
+                            echo checkSelectFt($heightFt, 4);
+                            ?>>4</option>
+                            <option value="5" <?php
+                            echo checkSelectFt($heightFt, 5);
+                            ?>>5</option>
+                            <option value="6" <?php
+                            echo checkSelectFt($heightFt, 6);
+                            ?>>6</option>
+                            <option value="7" <?php
+                            echo checkSelectFt($heightFt, 7);
+                            ?>>7</option>
+                            <option value="8" <?php
+                            echo checkSelectFt($heightFt, 8);
+                            ?>>8</option>
                         </select>
                     </label
                     <label>Height in inches
@@ -64,16 +83,16 @@ require 'includes/logic.php';
                 </div>
 
                 <div id='wight-block'>
-                <label>Weight in lbs.
-                    <input type="number" name='weight' step='0.1' value='<?= $weight ?? '' ?>'>
-                </label>
+                    <label>Weight in lbs.
+                        <input type="number" name='weight' step='0.1' value='<?= $weight ?? '' ?>'>
+                    </label>
                 </div>
             </fieldset>
             <input type="submit" value='calculate' class='btn'>
         </form>
-        
+
         <div id='results'>
-            <?= $response ; ?>
+            <?= $response ?? ''; ?>
         </div>
     </body>
 

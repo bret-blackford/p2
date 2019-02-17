@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+//echo "now in calcBMI.php file <br>";
 require 'includes/helpers.php';
 
 $name = $_POST['name'];
@@ -22,7 +23,7 @@ $status = checkHealth($bmi);
 
 $response = $name . ", you are a " . $age . " year old " . $gender;
 $response .= " and have a body mass index (BMI) of : " . $bmi . "%";
-$response .= " which gives classifies you as " . $status;
+$response .= " which classifies you as " . $status;
 
 
 $_SESSION['response']= $response;
@@ -32,6 +33,7 @@ $_SESSION['dob'] = $dob;
 $_SESSION['heightFeet'] = $heightFeet;
 $_SESSION['heightInches'] = $heightInches;
 $_SESSION['weight'] = $weight;
+$_SESSION['gender'] = $gender;
 
 header('location: index.php');
 
