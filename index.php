@@ -17,6 +17,7 @@ require 'includes/logic.php';
 
     <body>
         <h1>BMI Calculator</h1>
+        Enter the information below and the app will calculate your body mass index, or BMI, which gives you and indication if you are at a healthy body weight.
         <form method='POST' action='calcBMI.php' class='form'>
             <fieldset>
                 <label id='line'>Name

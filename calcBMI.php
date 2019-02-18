@@ -22,8 +22,8 @@ $bmi = number_format( ($weight * 703) / (pow($totHeightInches, 2)), 2 );
 $status = checkHealth($bmi);
 
 $response = $name . ", you are a " . $age . " year old " . $gender;
-$response .= " and have a body mass index (BMI) of : " . $bmi . "%";
-$response .= " which classifies you as " . $status;
+$response .= " and have a body mass index (BMI) of : <b>" . $bmi . "</b>%";
+$response .= " which classifies you as <b>" . $status . "</b>";
 
 
 $_SESSION['response']= $response;
