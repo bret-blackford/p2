@@ -3,14 +3,10 @@ html {
     margin-left: 5%;
 }
 
-form {
-    background-color: lightgoldenrodyellow;
-}
-
-
 fieldset {
     font-size: 1.25em;
     margin-bottom: 20px;
+    background-color: lightgoldenrodyellow;
 }
 
 input[type='radio'] {
@@ -21,9 +17,11 @@ input[type='radio'] {
 
 #line {
     float:left;
+    margin-top: .25em;
 }
 
-#gender-block, #height-block, #wight-block {
+#gender-block, #height-block, #weight-block {
+    margin-top: .25em;
     float:left;
     clear: left;
 }
@@ -32,15 +30,26 @@ input[name=name]{
     width:200px;
 }
 
+#results {
+    font-size: 1.25em;
+    margin-top: 1em;
+    background-color: linen;
+}
+
+footer {
+    height: 10rem;
+}
+
 #ftr {
+    display: block;
     width: 100%;
     float: right;
-    text-height: .75em;
+    font-size: .75em;
     text-align: right;
     color: red;
     border-top-style: double;
     border-top-width: 3px;
     border-top: black;
-    margin-top: 2em;
-    padding-top: 1em;
+    margin-top: .5em;
+    padding-top: .25em;
 }

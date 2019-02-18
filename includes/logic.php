@@ -19,6 +19,8 @@ if( isset($_SESSION['heightFeet']) ){
 }
 if( isset($_SESSION['heightInches']) ){
     $heightInches = $_SESSION['heightInches'];
+} else {
+    $heightInches = 0;
 }
 if( isset($_SESSION['weight']) ){
     $weight = $_SESSION['weight'];
@@ -43,6 +45,14 @@ session_unset();
 function checkSelectFt($heightFt, $inInt) {
     //echo "in checkSelectFt(" . $heightFt . "," . $inInt. ") <br>";
     if ($heightFt == $inInt) {
+        return "selected";
+    }
+    return "";
+}
+
+function checkSelectInch($heightInch, $inInt) {
+    //echo "in checkSelectFt(" . $heightInch . "," . $inInt. ") <br>";
+    if ($heightInch == $inInt) {
         return "selected";
     }
     return "";

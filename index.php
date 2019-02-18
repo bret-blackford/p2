@@ -65,23 +65,47 @@ require 'includes/logic.php';
                     </label
                     <label>Height in inches
                         <select name="heightInches" >
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
+                            <option value="0" <?php
+                            echo checkSelectInch($heightInches, 0);
+                            ?>>0</option>
+                            <option value="1" <?php
+                            echo checkSelectInch($heightInches, 1);
+                            ?>>1</option>
+                            <option value="2" <?php
+                            echo checkSelectInch($heightInches, 2);
+                            ?>>2</option>
+                            <option value="3" <?php
+                            echo checkSelectInch($heightInches, 3);
+                            ?>>3</option>
+                            <option value="4" <?php
+                            echo checkSelectInch($heightInches, 4);
+                            ?>>4</option>
+                            <option value="5" <?php
+                            echo checkSelectInch($heightInches, 5);
+                            ?>>5</option>
+                            <option value="6"<?php
+                            echo checkSelectInch($heightInches, 6);
+                            ?>>6</option>
+                            <option value="7" <?php
+                            echo checkSelectInch($heightInches, 7);
+                            ?>>7</option>
+                            <option value="8" <?php
+                            echo checkSelectInch($heightInches, 8);
+                            ?>>8</option>
+                            <option value="9" <?php
+                            echo checkSelectInch($heightInches, 9);
+                            ?>>9</option>
+                            <option value="10" <?php
+                            echo checkSelectInch($heightInches, 10);
+                            ?>>10</option>
+                            <option value="11" <?php
+                            echo checkSelectInch($heightInches, 11);
+                            ?>>11</option>
                         </select>
                     </label>
                 </div>
 
-                <div id='wight-block'>
+                <div id='weight-block'>
                     <label>Weight in lbs.
                         <input type="number" name='weight' step='0.1' value='<?= $weight ?? '' ?>'>
                     </label>
@@ -93,10 +117,11 @@ require 'includes/logic.php';
         <div id='results'>
             <?= $response ?? ''; ?>
         </div>
-        <footer
-            <hr><br>
+        <br>
+        <footer>
+            <hr>
             <div id="ftr">
-            &COPY; <?php echo date("Y"); ?> date M. Bret Blackford
+                &COPY; <?php echo date("Y"); ?>  M. Bret Blackford
             </div>
         </footer>
     </body>
