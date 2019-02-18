@@ -115,7 +115,7 @@ require 'includes/logic.php';
             <input type="submit" value='calculate' class='btn'>
         </form>
 
-        <div id='results'>
+        <div id="results">
             <?= $response ?? ''; ?>
         </div>
         <br>
