@@ -5,7 +5,7 @@ html {
 
 fieldset {
     font-size: 1.4em;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     background-color: lightgoldenrodyellow;
     margin-top: 15px;
 }
@@ -39,7 +39,8 @@ input[name=name]{
 }
 
 footer {
-    height: 10rem;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
 }
 
 #ftr {
@@ -49,9 +50,6 @@ footer {
     font-size: .75em;
     text-align: right;
     color: black;
-    border-top-style: double;
-    border-top-width: 3px;
-    border-top: black;
     margin-top: .5em;
     padding-top: .25em;
 }
