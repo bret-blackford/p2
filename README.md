@@ -1,5 +1,5 @@
 # Project 2
-+ By: *your first and last name*
++ By: *M Bret Blackford*
 + Production URL: <http://p2.bret-dwa15.vip/>
 
 ## Outside resources
