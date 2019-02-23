@@ -1,6 +1,6 @@
 # Project 2
 + By: *M Bret Blackford*
-+ Production URL: <http://p2.bret-dwa15.vip/>
++ Production URL: <http://p2.bret-dwa15.vip/> or <http://p2.mbret.me>
 
 ## Outside resources
 *None*
