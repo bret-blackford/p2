@@ -15,7 +15,10 @@ if ($submitted) {
             [
                 'name' => 'required|alpha',
                 'dob' => 'required',
-                'weight' => 'required|digit|min:0|max:1000',
+                'weight' => 'required|numeric|min:0|max:1000',
+                'heightFeet' => 'required|digit|min:1|max:8',
+                'heightInches' => 'required|digit|min:0|max:12',
+                'gender' => 'required',
     ]);
 }
 

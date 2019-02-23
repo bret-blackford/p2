@@ -20,24 +20,14 @@ require 'calcBMI.php';
         <h1>BMI Calculator</h1>
         Enter the information below and the app will calculate your body mass index, or BMI, which gives you and indication if you are at a healthy body weight.
 
-        <?php if (isset($errors) && $errors) : ?>
-            <div class="alert alert-danger">
-                <ul>
-                    <?php foreach ($errors as $error): ?>
-                        <li><?= $error ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        <?php endif; ?>
-
         <!--form method='POST' action='calcBMI.php' class='form'-->
         <form method='POST'  class='form' >
             <fieldset>
-                <label id='line'>Name
+                <label class='line'>Name
                     <input type='text' name='name' value='<?= $form->get('name'); ?>'>
 
                 </label>
-                <label id='line'>Date of Birth
+                <label class='line'>Date of Birth
                     <input type="date" name='dob' value="<?= $form->get('dob'); ?>">
                 </label>
                 <div id='gender-block'>
@@ -50,11 +40,7 @@ require 'calcBMI.php';
                 <div id='height-block'>
                     <label>Height in feet
                         <select name="heightFeet" >
-                            <option value="1" <?php
-                            if ($form->get('heightFeet') == '1') {
-                                echo 'selected';
-                            }
-                            ?>>1</option>
+                            <option value="1" <?php echo isSelected($form->get('heightFeet'), '1'); ?>>1</option>
                             <option value="2" <?php echo isSelected($form->get('heightFeet'), '2'); ?>>2</option>
                             <option value="3" <?php echo isSelected($form->get('heightFeet'), '3'); ?>>3</option>
                             <option value="4" <?php echo isSelected($form->get('heightFeet'), '4'); ?>>4</option>
@@ -63,7 +49,7 @@ require 'calcBMI.php';
                             <option value="7" <?php echo isSelected($form->get('heightFeet'), '7'); ?>>7</option>
                             <option value="8" <?php echo isSelected($form->get('heightFeet'), '8'); ?>>8</option>
                         </select>
-                    </label
+                    </label>
                     <label>Height in inches
                         <select name="heightInches" >
                             <option value="0" <?php
