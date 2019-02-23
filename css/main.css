@@ -38,6 +38,7 @@ input[name=name]{
     padding: .5em;
 }
 
+
 footer {
     margin-bottom: 1px;
     padding-bottom: 1px;
@@ -52,4 +53,18 @@ footer {
     color: black;
     margin-top: .5em;
     padding-top: .25em;
+}
+
+form #alerts li.alert-danger {
+    display: block;
+    color: red;
+    background-color: yellow !important;
+    width:100%;
+}
+
+#alerts ul li{
+    font-size: 1.25em;
+    margin-top: 1em;
+    background-color: red;
+    padding: .5em;
 }
